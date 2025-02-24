@@ -1,133 +1,161 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz sui Fiordi Norvegesi</title>
-  <!-- Carica il font Open Sans da Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 18px;
-      line-height: 28.8px;
-      letter-spacing: normal;
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 0 10px;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .question {
-      margin-bottom: 20px;
-    }
-    .question p {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .options label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    #result {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sui Fiordi Norvegesi</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 28.8px;
+            text-align: left;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <h2>Quiz sui Fiordi Norvegesi</h2>
-  <form id="quizForm">
-    <!-- Domanda 1 -->
-    <div class="question">
-      <p>1. Quale fiordo è il più lungo e profondo della Norvegia?</p>
-      <div class="options">
-        <label><input type="radio" name="q1" value="Sognefjord"> Sognefjord</label>
-        <label><input type="radio" name="q1" value="Geirangerfjord"> Geirangerfjord</label>
-        <label><input type="radio" name="q1" value="Hardangerfjord"> Hardangerfjord</label>
-      </div>
+    <div class="quiz-container">
+        <form id="quizForm">
+            <div class="question">
+                1. Come si sono formati i fiordi norvegesi?
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A causa di eruzioni vulcaniche</label>
+                <label><input type="radio" name="q1" value="B"> Per l'erosione dei ghiacciai</label>
+                <label><input type="radio" name="q1" value="C"> A seguito di movimenti tettonici</label>
+            </div>
+            <p class="correct-answer" style="display:none;">Risposta corretta: Per l'erosione dei ghiacciai</p>
+            
+            <div class="question">
+                2. Qual è il fiordo più lungo e profondo della Norvegia?
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> Geirangerfjord</label>
+                <label><input type="radio" name="q2" value="B"> Sognefjord</label>
+                <label><input type="radio" name="q2" value="C"> Hardangerfjord</label>
+            </div>
+            <p class="correct-answer" style="display:none;">Risposta corretta: Sognefjord</p>
+
+            <div class="question">
+                3. Quale creatura leggendaria è associata ai fiordi norvegesi?
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> Il Kraken</label>
+                <label><input type="radio" name="q3" value="B"> Le Huldra</label>
+                <label><input type="radio" name="q3" value="C"> Il Minotauro</label>
+            </div>
+            <p class="correct-answer" style="display:none;">Risposta corretta: Le Huldra</p>
+
+            <div class="question">
+                4. Quale città norvegese è nota per il suo mercato del pesce e i quartieri in legno?
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> Oslo</label>
+                <label><input type="radio" name="q4" value="B"> Bergen</label>
+                <label><input type="radio" name="q4" value="C"> Stavanger</label>
+            </div>
+            <p class="correct-answer" style="display:none;">Risposta corretta: Bergen</p>
+
+            <div class="question">
+                5. Perché i fiordi norvegesi sono considerati patrimonio dell'umanità UNESCO?
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> Per la loro importanza storica</label>
+                <label><input type="radio" name="q5" value="B"> Per la loro bellezza naturale e biodiversità</label>
+                <label><input type="radio" name="q5" value="C"> Per il loro valore economico</label>
+            </div>
+            <p class="correct-answer" style="display:none;">Risposta corretta: Per la loro bellezza naturale e biodiversità</p>
+
+            <button type="button" class="btn" id="quizButton" onclick="controllaRisposte()">Invia Risposte</button>
+        </form>
     </div>
 
-    <!-- Domanda 2 -->
-    <div class="question">
-      <p>2. Quale processo ha dato origine ai fiordi norvegesi?</p>
-      <div class="options">
-        <label><input type="radio" name="q2" value="Eruzione vulcanica"> Eruzione vulcanica</label>
-        <label><input type="radio" name="q2" value="Erosione glaciale"> Erosione glaciale</label>
-        <label><input type="radio" name="q2" value="Movimenti tettonici"> Movimenti tettonici</label>
-      </div>
-    </div>
+    <script>
+        function controllaRisposte() {
+            const risposteCorrette = {
+                q1: "B", 
+                q2: "B", 
+                q3: "B", 
+                q4: "B", 
+                q5: "B"
+            };
 
-    <!-- Domanda 3 -->
-    <div class="question">
-      <p>3. Quale creatura leggendaria si dice abiti le foreste vicino ai fiordi?</p>
-      <div class="options">
-        <label><input type="radio" name="q3" value="Troll"> Troll</label>
-        <label><input type="radio" name="q3" value="Elfi"> Elfi</label>
-        <label><input type="radio" name="q3" value="Huldra"> Huldra</label>
-      </div>
-    </div>
+            document.querySelectorAll(".options").forEach((group, index) => {
+                const name = "q" + (index + 1);
+                const risposte = group.querySelectorAll("input[type='radio']");
+                let rispostaData = null;
 
-    <!-- Domanda 4 -->
-    <div class="question">
-      <p>4. Quale città, nota per il suo patrimonio marittimo e le case in legno, è menzionata come vicina ai fiordi?</p>
-      <div class="options">
-        <label><input type="radio" name="q4" value="Bergen"> Bergen</label>
-        <label><input type="radio" name="q4" value="Oslo"> Oslo</label>
-        <label><input type="radio" name="q4" value="Trondheim"> Trondheim</label>
-      </div>
-    </div>
+                risposte.forEach(radio => {
+                    if (radio.checked) {
+                        rispostaData = radio.value;
+                        if (radio.value === risposteCorrette[name]) {
+                            radio.parentElement.classList.add("correct");
+                        } else {
+                            radio.parentElement.classList.add("incorrect");
+                        }
+                    }
+                    radio.disabled = true;
+                });
 
-    <!-- Domanda 5 -->
-    <div class="question">
-      <p>5. Quale aspetto del turismo in Norvegia viene sottolineato nel testo?</p>
-      <div class="options">
-        <label><input type="radio" name="q5" value="Turismo di massa"> Turismo di massa</label>
-        <label><input type="radio" name="q5" value="Turismo sostenibile"> Turismo sostenibile</label>
-        <label><input type="radio" name="q5" value="Turismo di lusso"> Turismo di lusso</label>
-      </div>
-    </div>
-
-    <button type="button" onclick="checkQuiz()">Invia Risposte</button>
-  </form>
-  
-  <div id="result"></div>
-
-  <script>
-    function checkQuiz() {
-      var total = 5;
-      var score = 0;
-      // Definisci le risposte corrette
-      var answers = {
-        q1: "Sognefjord",
-        q2: "Erosione glaciale",
-        q3: "Huldra",
-        q4: "Bergen",
-        q5: "Turismo sostenibile"
-      };
-
-      // Verifica le risposte selezionate
-      for (var q in answers) {
-        var selected = document.querySelector('input[name="' + q + '"]:checked');
-        if (selected && selected.value === answers[q]) {
-          score++;
+                document.querySelectorAll(".correct-answer")[index].style.display = "block";
+            });
+            
+            const quizButton = document.getElementById("quizButton");
+            quizButton.innerText = "Ricomincia il Quiz";
+            quizButton.setAttribute("onclick", "resetQuiz()");
         }
-      }
 
-      // Mostra il risultato
-      document.getElementById("result").innerHTML = "Hai totalizzato " + score + " su " + total + " risposte corrette.";
-    }
-  </script>
+        function resetQuiz() {
+            document.getElementById("quizForm").reset();
+            document.querySelectorAll(".correct, .incorrect").forEach(el => el.classList.remove("correct", "incorrect"));
+            document.querySelectorAll(".correct-answer").forEach(el => el.style.display = "none");
+            document.querySelectorAll("input[type='radio']").forEach(el => el.disabled = false);
+            
+            const quizButton = document.getElementById("quizButton");
+            quizButton.innerText = "Invia Risposte";
+            quizButton.setAttribute("onclick", "controllaRisposte()");
+        }
+    </script>
 </body>
 </html>
